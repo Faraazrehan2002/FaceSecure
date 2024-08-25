@@ -1,38 +1,193 @@
-.App {
+.App{
+  margin-top: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.success{
+  padding: 1rem;
+  color: green;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.failure{
+  padding: 1rem;
+  color: red;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.section-main{
+  background-color:blue;
+  background-color: #d8d8d8; /* Light gray */
+  /* OR */
+
+  
+
+}
+
+
+
+
+/* Add these styles to your CSS file or use a CSS-in-JS solution */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: linear-gradient(to right, rgb(255, 228, 230), rgb(120, 158, 254));
+  
+}
+
+.App {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+}
+
+.section-main {
+  font-family: 'Epilogue', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-size: larger;
+  color: #11009E;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0ece2; /* Light beige color for clay effect */
+  border-radius: 20px; /* Adjust the border-radius as needed for the clay effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);}
+
+.container {
+  text-align: center;
+}
+
+.button {
+  background-color: #4CAF50; /* Green background color */
+  color: white; /* White text color */
+  padding: 10px 20px; /* Padding for better appearance */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add border-radius for rounded corners */
+  cursor: pointer; /* Add a pointer cursor */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+
+  /* Additional styles for button states */
+  &:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+
+  &:active {
+    background-color: #398438; /* Even darker green on click */
+  }
+}
+
+
+form {
+  margin-bottom: 20px; /* Add margin as needed */
+}
+
+/* Add responsive styles as needed */
+@media (max-width: 768px) {
+  .section-main {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+}
+
+input[type=file]::file-selector-button {
+  margin-right: 20px;
+  border: black;
+  background: #084cdf;
+  padding: 7px 10px;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+  font-family: 'Poppins', sans-serif;
+}
+
+input[type=file]::file-selector-button:hover {
+  background: #0d45a5;
+}
+
+
+/* CSS */
+.button-3 {
+  font-family: 'Poppins', sans-serif;
+
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin-left: 25px;
+}
+
+.button-3:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button-3:hover {
+  background-color: #2c974b;
+}
+
+.button-3:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.button-3:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.button-3:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+
+.file-input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Add separation between the file input and the button */
+}
+
+.file-input-label {
+  background-color: #4CAF50;
   color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Poppins', sans-serif; /* Change font-family for the label */
 }
 
-.App-link {
-  color: #61dafb;
+.form-container {
+  margin-bottom: 20px; /* Adjust margin as needed for separation */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.authenticateBut{
+  padding-left: 4rem;
+}
+
+.fileInput{
+  margin-right: 20px;
 }
